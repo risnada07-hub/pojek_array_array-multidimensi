@@ -1,0 +1,417 @@
+
+<h2 class="sr-only">Flowchart program array Python multidimensi: alur menu utama dan alur per dimensi 1D hingga 4D</h2>
+
+<div style="padding:1rem 0;">
+
+<div style="display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap;">
+  <button onclick="showFC('fmenu')" id="bmenu" style="font-size:13px;padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-info);background:var(--color-background-info);color:var(--color-text-info);cursor:pointer;font-weight:500;">Alur menu utama</button>
+  <button onclick="showFC('f1d')" id="b1d" style="font-size:13px;padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:transparent;color:var(--color-text-secondary);cursor:pointer;">Array 1D</button>
+  <button onclick="showFC('f2d')" id="b2d" style="font-size:13px;padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:transparent;color:var(--color-text-secondary);cursor:pointer;">Array 2D</button>
+  <button onclick="showFC('f3d')" id="b3d" style="font-size:13px;padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:transparent;color:var(--color-text-secondary);cursor:pointer;">Array 3D</button>
+  <button onclick="showFC('f4d')" id="b4d" style="font-size:13px;padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:transparent;color:var(--color-text-secondary);cursor:pointer;">Array 4D</button>
+  <button onclick="showFC('ffile')" id="bfile" style="font-size:13px;padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);background:transparent;color:var(--color-text-secondary);cursor:pointer;">Dari file</button>
+</div>
+
+<div id="fmenu" style="display:block;">
+<svg width="100%" viewBox="0 0 680 660" role="img">
+<title>Flowchart alur menu utama program array Python</title>
+<desc>Diagram alur dari mulai, tampilkan menu, pilih pilihan, panggil fungsi array, tanya ulangi, sampai selesai</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray">
+  <rect x="270" y="20" width="140" height="44" rx="22" stroke-width="0.5"/>
+  <text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Mulai</text>
+</g>
+
+<line x1="340" y1="64" x2="340" y2="94" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal">
+  <rect x="200" y="94" width="280" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central">Bersihkan file output</text>
+  <text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central">open("data_output.txt","w")</text>
+</g>
+
+<line x1="340" y1="150" x2="340" y2="180" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal">
+  <rect x="200" y="180" width="280" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="340" y="202" text-anchor="middle" dominant-baseline="central">Tampilkan menu</text>
+  <text class="ts" x="340" y="222" text-anchor="middle" dominant-baseline="central">1–5 pilih array, 0 keluar</text>
+</g>
+
+<line x1="340" y1="236" x2="340" y2="266" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-amber">
+  <polygon points="340,266 460,306 340,346 220,306" stroke-width="0.5"/>
+  <text class="th" x="340" y="300" text-anchor="middle" dominant-baseline="central">Pilihan?</text>
+  <text class="ts" x="340" y="318" text-anchor="middle" dominant-baseline="central">input user</text>
+</g>
+
+<line x1="460" y1="306" x2="520" y2="306" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="487" y="298" text-anchor="middle">1–5</text>
+
+<g class="c-purple">
+  <rect x="520" y="278" width="140" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="590" y="300" text-anchor="middle" dominant-baseline="central">Panggil fungsi</text>
+  <text class="ts" x="590" y="318" text-anchor="middle" dominant-baseline="central">array_Xd_dari_Y()</text>
+</g>
+
+<path d="M590 334 L590 390 L340 390" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<line x1="340" y1="346" x2="340" y2="390" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="308" y="372" text-anchor="middle">0</text>
+
+<g class="c-amber">
+  <polygon points="340,390 450,425 340,460 230,425" stroke-width="0.5"/>
+  <text class="th" x="340" y="418" text-anchor="middle" dominant-baseline="central">Ulangi?</text>
+  <text class="ts" x="340" y="436" text-anchor="middle" dominant-baseline="central">pilihan == 0?</text>
+</g>
+
+<path d="M230 425 L160 425 L160 207 L200 207" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+<text class="ts" x="152" y="316" text-anchor="end">Tidak</text>
+
+<line x1="340" y1="460" x2="340" y2="500" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="355" y="484">Ya</text>
+
+<g class="c-gray">
+  <rect x="200" y="500" width="280" height="56" rx="8" stroke-width="0.5"/>
+  <text class="th" x="340" y="522" text-anchor="middle" dominant-baseline="central">Cetak pesan selesai</text>
+  <text class="ts" x="340" y="542" text-anchor="middle" dominant-baseline="central">"Program selesai."</text>
+</g>
+
+<line x1="340" y1="556" x2="340" y2="596" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray">
+  <rect x="270" y="596" width="140" height="44" rx="22" stroke-width="0.5"/>
+  <text class="th" x="340" y="618" text-anchor="middle" dominant-baseline="central">Selesai</text>
+</g>
+</svg>
+</div>
+
+<div id="f1d" style="display:none;">
+<svg width="100%" viewBox="0 0 680 680" role="img">
+<title>Flowchart fungsi array 1D dari user</title>
+<desc>Alur deklarasi, inisialisasi, input user loop, proses total dan rata-rata, output console dan file</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="270" y="20" width="140" height="44" rx="22" stroke-width="0.5"/>
+<text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Fungsi 1D</text></g>
+
+<line x1="340" y1="64" x2="340" y2="94" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue"><rect x="190" y="94" width="300" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central">Deklarasi &amp; inisialisasi</text>
+<text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central">UKURAN=5, nilai=[0]*UKURAN</text></g>
+
+<line x1="340" y1="150" x2="340" y2="180" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal"><rect x="200" y="180" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="202" text-anchor="middle" dominant-baseline="central">i = 0</text></g>
+
+<line x1="340" y1="224" x2="340" y2="254" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-amber"><polygon points="340,254 460,290 340,326 220,290" stroke-width="0.5"/>
+<text class="th" x="340" y="284" text-anchor="middle" dominant-baseline="central">i &lt; UKURAN?</text></g>
+
+<line x1="460" y1="290" x2="540" y2="290" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="497" y="282">Tidak</text>
+
+<g class="c-purple"><rect x="540" y="262" width="120" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="600" y="284" text-anchor="middle" dominant-baseline="central">Proses</text>
+<text class="ts" x="600" y="302" text-anchor="middle" dominant-baseline="central">total += nilai[i]</text></g>
+
+<line x1="340" y1="326" x2="340" y2="360" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="356" y="347">Ya</text>
+
+<g class="c-teal"><rect x="200" y="360" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="382" text-anchor="middle" dominant-baseline="central">nilai[i] = int(input(...))</text></g>
+
+<path d="M200 382 L140 382 L140 290 L220 290" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<path d="M600 318 L600 430 L490 430" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="190" y="406" width="300" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="428" text-anchor="middle" dominant-baseline="central">Hitung rata-rata</text>
+<text class="ts" x="340" y="448" text-anchor="middle" dominant-baseline="central">rata = total / UKURAN</text></g>
+
+<line x1="340" y1="462" x2="340" y2="492" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="492" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="514" text-anchor="middle" dominant-baseline="central">Output ke console (print)</text></g>
+
+<line x1="340" y1="536" x2="340" y2="566" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="566" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="588" text-anchor="middle" dominant-baseline="central">Output ke file (f.write)</text></g>
+
+<line x1="340" y1="610" x2="340" y2="640" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray"><rect x="270" y="640" width="140" height="30" rx="15" stroke-width="0.5"/>
+<text class="th" x="340" y="655" text-anchor="middle" dominant-baseline="central">Return</text></g>
+</svg>
+</div>
+
+<div id="f2d" style="display:none;">
+<svg width="100%" viewBox="0 0 680 720" role="img">
+<title>Flowchart fungsi array 2D dari user</title>
+<desc>Alur deklarasi matriks, nested loop input i dan j, proses jumlah per baris, output console dan file</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="270" y="20" width="140" height="44" rx="22" stroke-width="0.5"/>
+<text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Fungsi 2D</text></g>
+<line x1="340" y1="64" x2="340" y2="94" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue"><rect x="180" y="94" width="320" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central">Deklarasi &amp; inisialisasi</text>
+<text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central">BARIS=3, KOLOM=3, matriks=[[0]*K...]</text></g>
+<line x1="340" y1="150" x2="340" y2="180" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal"><rect x="220" y="180" width="240" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="202" text-anchor="middle" dominant-baseline="central">i = 0, j = 0</text></g>
+<line x1="340" y1="224" x2="340" y2="254" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-amber"><polygon points="340,254 468,292 340,330 212,292" stroke-width="0.5"/>
+<text class="th" x="340" y="286" text-anchor="middle" dominant-baseline="central">i &lt; BARIS &amp; j &lt; KOLOM?</text></g>
+<line x1="340" y1="330" x2="340" y2="364" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="356" y="350">Ya</text>
+<line x1="468" y1="292" x2="548" y2="292" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="505" y="284">Tidak</text>
+
+<g class="c-teal"><rect x="200" y="364" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="386" text-anchor="middle" dominant-baseline="central">matriks[i][j] = int(input(...))</text></g>
+<path d="M200 386 L140 386 L140 292 L212 292" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="548" y="264" width="112" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="604" y="286" text-anchor="middle" dominant-baseline="central">Proses</text>
+<text class="ts" x="604" y="304" text-anchor="middle" dominant-baseline="central">jumlah tiap baris</text></g>
+<path d="M604 320 L604 450 L490 450" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="190" y="426" width="300" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="448" text-anchor="middle" dominant-baseline="central">Hitung jumlah per baris</text>
+<text class="ts" x="340" y="466" text-anchor="middle" dominant-baseline="central">for i: s=0, for j: s+=matriks[i][j]</text></g>
+<line x1="340" y1="482" x2="340" y2="512" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="512" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="534" text-anchor="middle" dominant-baseline="central">Output ke console (print)</text></g>
+<line x1="340" y1="556" x2="340" y2="586" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="586" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="608" text-anchor="middle" dominant-baseline="central">Output ke file (f.write)</text></g>
+<line x1="340" y1="630" x2="340" y2="660" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray"><rect x="270" y="660" width="140" height="30" rx="15" stroke-width="0.5"/>
+<text class="th" x="340" y="675" text-anchor="middle" dominant-baseline="central">Return</text></g>
+</svg>
+</div>
+
+<div id="f3d" style="display:none;">
+<svg width="100%" viewBox="0 0 680 740" role="img">
+<title>Flowchart fungsi array 3D dari user</title>
+<desc>Alur deklarasi array 3D, triple nested loop input lapisan baris kolom, proses kali 2 dan total, output</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="270" y="20" width="140" height="44" rx="22" stroke-width="0.5"/>
+<text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Fungsi 3D</text></g>
+<line x1="340" y1="64" x2="340" y2="94" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue"><rect x="170" y="94" width="340" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central">Deklarasi &amp; inisialisasi</text>
+<text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central">L=2,B=3,K=4 arr3d=[[[0]*K...]...]</text></g>
+<line x1="340" y1="150" x2="340" y2="180" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal"><rect x="220" y="180" width="240" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="202" text-anchor="middle" dominant-baseline="central">l=0, i=0, j=0</text></g>
+<line x1="340" y1="224" x2="340" y2="254" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-amber"><polygon points="340,254 468,292 340,330 212,292" stroke-width="0.5"/>
+<text class="th" x="340" y="284" text-anchor="middle" dominant-baseline="central">l&lt;L, i&lt;B, j&lt;K?</text>
+<text class="ts" x="340" y="302" text-anchor="middle" dominant-baseline="central">3 dimensi nested</text></g>
+<line x1="340" y1="330" x2="340" y2="364" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="356" y="350">Ya</text>
+<line x1="468" y1="292" x2="548" y2="292" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="505" y="284">Tidak</text>
+
+<g class="c-teal"><rect x="190" y="364" width="300" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="386" text-anchor="middle" dominant-baseline="central">arr3d[l][i][j] = int(input(...))</text></g>
+<path d="M190 386 L130 386 L130 292 L212 292" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="548" y="264" width="112" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="604" y="286" text-anchor="middle" dominant-baseline="central">Proses</text>
+<text class="ts" x="604" y="304" text-anchor="middle" dominant-baseline="central">arr[l][i][j] *= 2</text></g>
+<path d="M604 320 L604 460 L490 460" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="190" y="436" width="300" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="458" text-anchor="middle" dominant-baseline="central">Hitung total semua elemen</text>
+<text class="ts" x="340" y="476" text-anchor="middle" dominant-baseline="central">total += arr3d[l][i][j]</text></g>
+<line x1="340" y1="492" x2="340" y2="522" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="522" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="544" text-anchor="middle" dominant-baseline="central">Output ke console (print)</text></g>
+<line x1="340" y1="566" x2="340" y2="596" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="596" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="618" text-anchor="middle" dominant-baseline="central">Output ke file (f.write)</text></g>
+<line x1="340" y1="640" x2="340" y2="670" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray"><rect x="270" y="670" width="140" height="30" rx="15" stroke-width="0.5"/>
+<text class="th" x="340" y="685" text-anchor="middle" dominant-baseline="central">Return</text></g>
+</svg>
+</div>
+
+<div id="f4d" style="display:none;">
+<svg width="100%" viewBox="0 0 680 760" role="img">
+<title>Flowchart fungsi array 4D dari user</title>
+<desc>Alur deklarasi array 4D, quad nested loop input, proses tambah 10 dan cari maksimum, output console dan file</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="270" y="20" width="140" height="44" rx="22" stroke-width="0.5"/>
+<text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Fungsi 4D</text></g>
+<line x1="340" y1="64" x2="340" y2="94" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue"><rect x="160" y="94" width="360" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central">Deklarasi &amp; inisialisasi</text>
+<text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central">D1=2,D2=2,D3=3,D4=3 arr4d=[[[[0]...]]]</text></g>
+<line x1="340" y1="150" x2="340" y2="180" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal"><rect x="210" y="180" width="260" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="202" text-anchor="middle" dominant-baseline="central">a=0, b=0, c=0, d=0</text></g>
+<line x1="340" y1="224" x2="340" y2="254" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-amber"><polygon points="340,254 468,292 340,330 212,292" stroke-width="0.5"/>
+<text class="th" x="340" y="284" text-anchor="middle" dominant-baseline="central">a&lt;D1,b&lt;D2,c&lt;D3,d&lt;D4?</text>
+<text class="ts" x="340" y="302" text-anchor="middle" dominant-baseline="central">4 dimensi nested</text></g>
+<line x1="340" y1="330" x2="340" y2="364" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="356" y="350">Ya</text>
+<line x1="468" y1="292" x2="548" y2="292" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="505" y="284">Tidak</text>
+
+<g class="c-teal"><rect x="175" y="364" width="330" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="386" text-anchor="middle" dominant-baseline="central">arr4d[a][b][c][d] = int(input(...))</text></g>
+<path d="M175 386 L120 386 L120 292 L212 292" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="548" y="264" width="112" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="604" y="282" text-anchor="middle" dominant-baseline="central">Proses</text>
+<text class="ts" x="604" y="298" text-anchor="middle" dominant-baseline="central">arr[a][b][c][d]</text>
+<text class="ts" x="604" y="312" text-anchor="middle" dominant-baseline="central">+= 10</text></g>
+<path d="M604 320 L604 480 L490 480" fill="none" stroke="var(--s)" stroke-width="1" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="180" y="456" width="310" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="335" y="478" text-anchor="middle" dominant-baseline="central">Cari nilai maksimum</text>
+<text class="ts" x="335" y="496" text-anchor="middle" dominant-baseline="central">if arr[a][b][c][d] &gt; maks: maks=...</text></g>
+<line x1="340" y1="512" x2="340" y2="542" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="542" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="564" text-anchor="middle" dominant-baseline="central">Output ke console (print)</text></g>
+<line x1="340" y1="586" x2="340" y2="616" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="616" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="638" text-anchor="middle" dominant-baseline="central">Output ke file (f.write)</text></g>
+<line x1="340" y1="660" x2="340" y2="690" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray"><rect x="270" y="690" width="140" height="30" rx="15" stroke-width="0.5"/>
+<text class="th" x="340" y="705" text-anchor="middle" dominant-baseline="central">Return</text></g>
+</svg>
+</div>
+
+<div id="ffile" style="display:none;">
+<svg width="100%" viewBox="0 0 680 780" role="img">
+<title>Flowchart fungsi array 3D dari file</title>
+<desc>Alur baca file, cek file ada atau tidak, isi array dari angka, proses normalisasi, output console dan file output</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<g class="c-gray"><rect x="270" y="20" width="140" height="44" rx="22" stroke-width="0.5"/>
+<text class="th" x="340" y="42" text-anchor="middle" dominant-baseline="central">Fungsi file I/O</text></g>
+<line x1="340" y1="64" x2="340" y2="94" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-blue"><rect x="180" y="94" width="320" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="116" text-anchor="middle" dominant-baseline="central">Deklarasi &amp; inisialisasi</text>
+<text class="ts" x="340" y="136" text-anchor="middle" dominant-baseline="central">L=2,B=3,K=3 arr3d=[[[0]*K...]...]</text></g>
+<line x1="340" y1="150" x2="340" y2="180" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal"><rect x="200" y="180" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="202" text-anchor="middle" dominant-baseline="central">Buka file input_multi.txt</text></g>
+<line x1="340" y1="224" x2="340" y2="254" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-amber"><polygon points="340,254 460,290 340,326 220,290" stroke-width="0.5"/>
+<text class="th" x="340" y="284" text-anchor="middle" dominant-baseline="central">File ada?</text></g>
+
+<line x1="460" y1="290" x2="560" y2="290" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="507" y="282">Tidak</text>
+
+<g class="c-red"><rect x="560" y="262" width="100" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="610" y="284" text-anchor="middle" dominant-baseline="central">Cetak error</text>
+<text class="ts" x="610" y="302" text-anchor="middle" dominant-baseline="central">return</text></g>
+
+<line x1="340" y1="326" x2="340" y2="360" class="arr" marker-end="url(#arrow)"/>
+<text class="ts" x="356" y="346">Ya</text>
+
+<g class="c-teal"><rect x="180" y="360" width="320" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="382" text-anchor="middle" dominant-baseline="central">Baca semua angka</text>
+<text class="ts" x="340" y="400" text-anchor="middle" dominant-baseline="central">[int(x) for x in f.read().split()]</text></g>
+<line x1="340" y1="416" x2="340" y2="446" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-teal"><rect x="190" y="446" width="300" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="468" text-anchor="middle" dominant-baseline="central">Isi array 3D dari angka</text>
+<text class="ts" x="340" y="486" text-anchor="middle" dominant-baseline="central">arr3d[l][i][j] = angka[idx]; idx++</text></g>
+<line x1="340" y1="502" x2="340" y2="532" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-purple"><rect x="180" y="532" width="320" height="56" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="554" text-anchor="middle" dominant-baseline="central">Proses normalisasi</text>
+<text class="ts" x="340" y="572" text-anchor="middle" dominant-baseline="central">rata=total/(L*B*K), arr[l][i][j]-=rata</text></g>
+<line x1="340" y1="588" x2="340" y2="618" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="618" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="640" text-anchor="middle" dominant-baseline="central">Output ke console (print)</text></g>
+<line x1="340" y1="662" x2="340" y2="692" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-green"><rect x="200" y="692" width="280" height="44" rx="8" stroke-width="0.5"/>
+<text class="th" x="340" y="714" text-anchor="middle" dominant-baseline="central">Output ke output_multi.txt</text></g>
+<line x1="340" y1="736" x2="340" y2="756" class="arr" marker-end="url(#arrow)"/>
+
+<g class="c-gray"><rect x="270" y="756" width="140" height="14" rx="7" stroke-width="0.5"/>
+<text class="th" x="340" y="763" text-anchor="middle" dominant-baseline="central">Return</text></g>
+</svg>
+</div>
+
+</div>
+
+<div style="margin-top:1rem;display:flex;gap:8px;flex-wrap:wrap;border-top:0.5px solid var(--color-border-tertiary);padding-top:1rem;">
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);">
+    <div style="width:14px;height:14px;border-radius:3px;background:var(--color-background-info);border:0.5px solid var(--color-border-info);"></div> Deklarasi/Inisialisasi
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);">
+    <div style="width:14px;height:14px;border-radius:3px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);"></div> Mulai/Selesai
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);">
+    <div style="width:14px;height:8px;background:#FAC775;transform:rotate(0deg);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);"></div> Keputusan
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);">
+    <div style="width:14px;height:14px;border-radius:3px;background:#E1F5EE;border:0.5px solid #0F6E56;"></div> Input/Proses loop
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);">
+    <div style="width:14px;height:14px;border-radius:3px;background:#AFA9EC;border:0.5px solid #534AB7;"></div> Proses/Hitung
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);">
+    <div style="width:14px;height:14px;border-radius:3px;background:#C0DD97;border:0.5px solid #3B6D11;"></div> Output
+  </div>
+</div>
+
+<script>
+function showFC(id) {
+  ['fmenu','f1d','f2d','f3d','f4d','ffile'].forEach(t=>document.getElementById(t).style.display='none');
+  document.getElementById(id).style.display='block';
+  const map={fmenu:'bmenu',f1d:'b1d',f2d:'b2d',f3d:'b3d',f4d:'b4d',ffile:'bfile'};
+  ['bmenu','b1d','b2d','b3d','b4d','bfile'].forEach(b=>{
+    const el=document.getElementById(b);
+    el.style.background='transparent';
+    el.style.color='var(--color-text-secondary)';
+    el.style.borderColor='var(--color-border-tertiary)';
+    el.style.fontWeight='400';
+  });
+  const a=document.getElementById(map[id]);
+  a.style.background='var(--color-background-info)';
+  a.style.color='var(--color-text-info)';
+  a.style.borderColor='var(--color-border-info)';
+  a.style.fontWeight='500';
+}
+</script>
